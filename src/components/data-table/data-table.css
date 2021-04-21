@@ -1,0 +1,90 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead th {
+  border-bottom: 2px solid gainsboro
+} 
+
+tbody td {
+  border-bottom: 2px solid gainsboro
+}
+
+th, td {
+  padding: 5px 5px;
+}
+
+
+.table-head {
+  text-align: left;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 14px;
+  background: none;
+  border: 1px solid #b5b1b1;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+  transition: 0.6s;
+}
+
+.btn-modal:hover {
+  background: #6495ED;
+}
+
+.btn-edit:hover{
+  color: #fff;
+}
+
+.btn-del:hover{
+  color: #fff;
+  background:red;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #008000;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn-edit:before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btn-edit:hover:before{
+  height: 180%;
+}
+
+.add-top {
+  padding: 10px 0;
+}
+
+.add {
+  cursor: pointer;
+}
+
+.add-top {
+  display: flex;
+  justify-content: flex-end;
+}
