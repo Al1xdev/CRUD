@@ -37,7 +37,13 @@ body {
 }
 
 .container {
-	display: flex;
-	justify-content: center;
-	padding-top: 100px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 100px; 
+}
+
+@media(max-width: 560px) {
+	.container {
+		padding: 10px 10px;
+	}
 }
