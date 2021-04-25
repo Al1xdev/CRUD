@@ -26,7 +26,7 @@ const Modal = () => {
     });
   };
 
-  const handleSubmit = e => {
+  const handleSubmitForm = e => {
     e.preventDefault();
     dispatch(addUser(userData));
     setUserData({id: null, name: "", email: ""});
@@ -51,13 +51,14 @@ const Modal = () => {
                 <img src={CloseIcon} alt="Close" />
               </div>
             </div>
-            <form className="form">
+            <form className="form" onSubmit={handleSubmitForm}>
               <div>
                 <label>Name</label>
                 <input
                   type="text"
                   value={userData.name}
                   onChange={(e) => handlechange("name", e.target.value)}
+                  required
                 />
               </div>
               <div>
@@ -66,9 +67,10 @@ const Modal = () => {
                   type="email"
                   value={userData.email}
                   onChange={(e) => handlechange("email", e.target.value)}
+                  required
                 />
               </div>
-              <button className="btn btn-modal" onClick={handleSubmit}>
+              <button className="btn btn-modal">
                 Add to table
               </button>
             </form>
